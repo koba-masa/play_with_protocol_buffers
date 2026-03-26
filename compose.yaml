@@ -1,0 +1,8 @@
+services:
+  buf:
+    build:
+      context: .
+      dockerfile: dockerfiles/buf.Dockerfile
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
