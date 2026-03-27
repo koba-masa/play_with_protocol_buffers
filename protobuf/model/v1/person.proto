@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package model.v1;
+
+import "model/v1/bushi.proto";
+
+message Person {
+  string name = 1;
+  // 士農工商に基づく身分
+  oneof social_status {
+    Bushi bushi = 2;
+  }
+}
