@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  buf-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: bufbuild/buf-setup-action@v1
+      - run: buf lint --error-format=github-actions
