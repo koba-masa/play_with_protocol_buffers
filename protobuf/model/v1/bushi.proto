@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package model.v1;
+
+message Bushi {
+  enum Type {
+    TYPE_UNSPECIFIED = 0;
+    TYPE_DAIMYO = 1;
+  }
+}
